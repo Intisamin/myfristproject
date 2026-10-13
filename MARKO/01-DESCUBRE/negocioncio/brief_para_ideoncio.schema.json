@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARKO Negocioncio a Ideoncio 1.2",
+  "type": "object",
+  "required": ["project_id", "version", "state", "source_validation", "segments", "offers", "content_angles", "approvals", "publishable"],
+  "properties": {
+    "project_id": {"type": "string", "minLength": 1},
+    "version": {"type": "string"},
+    "state": {"enum": ["PRELIMINAR", "LISTA_PARA_APROBACION", "APROBADA"]},
+    "source_validation": {"type": "object", "required": ["verdict", "source_id"]},
+    "segments": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "name", "external_problem", "internal_problem", "evidence_level"]}},
+    "offers": {"type": "array", "items": {"type": "object", "required": ["name", "deliverables", "exclusions", "price", "price_status"], "properties": {"price": {"type": ["number", "null"]}, "price_status": {"enum": ["PENDIENTE", "SUGERIDO", "PRUEBA_CONDICIONADA", "APROBADO_POR_PROPIETARIO", "VALIDADO_POR_MERCADO"]}}}},
+    "content_angles": {"type": "array", "items": {"type": "object", "required": ["segment_id", "external_problem", "internal_problem_evidence", "question_or_objection", "message", "evidence_ids", "cta", "limitations"]}},
+    "approvals": {"type": "object", "required": ["segment", "value_proposition", "offer", "prices", "messages", "cta"], "properties": {"segment": {"type": "boolean"}, "value_proposition": {"type": "boolean"}, "offer": {"type": "boolean"}, "prices": {"type": "boolean"}, "messages": {"type": "boolean"}, "cta": {"type": "boolean"}}},
+    "publishable": {"type": "boolean"}
+  },
+  "if": {"properties": {"publishable": {"const": true}}},
+  "then": {"properties": {"state": {"const": "APROBADA"}, "approvals": {"properties": {"segment": {"const": true}, "value_proposition": {"const": true}, "offer": {"const": true}, "prices": {"const": true}, "messages": {"const": true}, "cta": {"const": true}}}}}
+}
