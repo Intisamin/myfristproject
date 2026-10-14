@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARKO Ideoncio → Libretoncio v0.1 (BORRADOR)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_id",
+    "input_brief_version",
+    "ideoncio_version",
+    "approval_status",
+    "ideas"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "input_brief_version": {
+      "type": "string"
+    },
+    "ideoncio_version": {
+      "const": "0.1.0"
+    },
+    "approval_status": {
+      "enum": [
+        "PENDIENTE_APROBACION",
+        "APROBADO_POR_PROPIETARIO",
+        "RECHAZADO"
+      ]
+    },
+    "approved_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approved_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "segmento",
+          "categoria_4c",
+          "problema",
+          "causa",
+          "consecuencia",
+          "dolor_interno_estado",
+          "solucion",
+          "ventaja",
+          "idea_nucleo",
+          "angulo",
+          "gancho_conceptual",
+          "evidencia",
+          "restricciones",
+          "puntuacion",
+          "estado"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "segmento": {
+            "type": "string"
+          },
+          "categoria_4c": {
+            "enum": [
+              "CONCIENCIA",
+              "CAMINO",
+              "VALOR",
+              "CASOS_CONFIANZA"
+            ]
+          },
+          "problema": {
+            "type": "string"
+          },
+          "causa": {
+            "type": "string"
+          },
+          "consecuencia": {
+            "type": "string"
+          },
+          "dolor_interno": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dolor_interno_estado": {
+            "enum": [
+              "SUSTENTADO",
+              "HIPOTESIS",
+              "OMITIDO"
+            ]
+          },
+          "solucion": {
+            "type": "string"
+          },
+          "ventaja": {
+            "type": "string"
+          },
+          "insight": {
+            "type": "string"
+          },
+          "idea_nucleo": {
+            "type": "string"
+          },
+          "angulo": {
+            "type": "string"
+          },
+          "gancho_conceptual": {
+            "type": "string"
+          },
+          "formato_sugerido": {
+            "type": "string"
+          },
+          "cta_preliminar": {
+            "type": "string"
+          },
+          "evidencia": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "estado",
+                "afirmacion"
+              ],
+              "properties": {
+                "estado": {
+                  "enum": [
+                    "VERIFICADO_EXTERNO",
+                    "DATO_INTERNO",
+                    "DECLARADO_PROPIETARIO",
+                    "INFERENCIA",
+                    "HIPOTESIS",
+                    "NO_DISPONIBLE"
+                  ]
+                },
+                "afirmacion": {
+                  "type": "string"
+                },
+                "fuente": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "restricciones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "puntuacion": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "estado": {
+            "enum": [
+              "CANDIDATA_A_APROBACION",
+              "REVISAR",
+              "DESCARTAR",
+              "BLOQUEADA",
+              "APROBADA_POR_PROPIETARIO"
+            ]
+          },
+          "motivo": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
