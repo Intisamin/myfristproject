@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "project_id",
+    "calendar_id",
+    "schedule_item_id",
+    "idea_id",
+    "request_id",
+    "authorized_calendar"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "calendar_id": {
+      "type": "string"
+    },
+    "schedule_item_id": {
+      "type": "string"
+    },
+    "idea_id": {
+      "type": "string"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "authorized_calendar": {
+      "const": true
+    }
+  }
+}
