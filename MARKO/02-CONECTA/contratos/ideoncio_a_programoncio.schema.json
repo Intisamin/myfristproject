@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "project_id",
+    "bank_version",
+    "human_approval",
+    "ideas"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "bank_version": {
+      "type": "string"
+    },
+    "human_approval": {
+      "type": "object",
+      "required": [
+        "approved",
+        "approved_by"
+      ],
+      "properties": {
+        "approved": {
+          "const": true
+        },
+        "approved_by": {
+          "type": "string"
+        }
+      }
+    },
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "idea_id",
+          "rubro",
+          "title",
+          "status"
+        ],
+        "properties": {
+          "idea_id": {
+            "type": "string"
+          },
+          "rubro": {
+            "enum": [
+              "DOLOR",
+              "CASO",
+              "TIP",
+              "PROCESO"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "APROBADA_BANCO",
+              "BLOQUEADA_RECURSO",
+              "USADA",
+              "ARCHIVADA_OBSOLETA"
+            ]
+          },
+          "problem_id": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
