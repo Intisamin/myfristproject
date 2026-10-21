@@ -1,5 +1,7 @@
 # MARKO · Continuidad pública segura
 
+> **Último cierre (21/10/2026):** [CIERRE Y CONTINUIDAD — REANUDAR 22/10](./CIERRE_Y_CONTINUIDAD_2026-10-21.md) · [Checkpoint para retomar](./CHECKPOINT_2026-10-21.json)
+
 **Fecha:** 21/10/2026 · **Repositorio:** `Intisamin/myfristproject` (público).
 
 Este directorio ofrece un **resumen público de implementación**, no la versión íntegra de P0.2. Los 40 archivos históricos de `MARKO/` anteriores se mantienen. La arquitectura oficial es **11 subagentes + 1 orquestador**. Los documentos más antiguos que hablan de diez agentes son históricos, no vigentes.
