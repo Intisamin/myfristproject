@@ -1,3 +1,7 @@
+# Continuidad verificada 21/10/2026
+
+> La versión de referencia para **estado público** está en [publico/README.md](./publico/README.md). La fuente operativa P0.2 íntegra continúa **privada** porque el paquete original exige confidencialidad. Las carpetas documentales anteriores a 21/10 siguen preservadas como histórico.
+
 # MARKO-AGENTE
 
 Repositorio general de MARKO: **DESCUBRE → CONECTA → CRECE**.
