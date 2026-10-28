@@ -1,8 +1,8 @@
 {
-  "name": "marko-backend-p04",
-  "version": "0.4.0",
+  "name": "marko-orquestador-prototipo",
+  "version": "0.5.0",
   "private": true,
-  "description": "MARKO orchestrator protected preview: integration shell, no data or spending",
+  "description": "Orquestador MARKO protegido; consulta el registro publico de GitHub, sin pagos ni escritura autonoma",
   "scripts": {"test": "node --test"},
   "engines": {"node": ">=20"}
 }
