@@ -55,3 +55,6 @@
 
 ## 6. Puerta humana
 Se requiere que Iván confirme el nicho A y autorice la prueba H1 (consume créditos de HeyGen) antes de pasar a Negocioncio.
+
+## 7. Aprobación (27/10/2026, 21:24)
+Iván confirma el nicho: **consultorios privados, empezando por los odontológicos en Lima, Perú, con expansión posterior a consultorios privados en general de habla hispana**. Autoriza la prueba del avatar "Iván 2" con unos pocos segundos de video.
