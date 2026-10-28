@@ -1,5 +1,7 @@
 # MARKO · Continuidad pública segura
 
+> **Avance técnico 27/10/2026:** [P0 — registro persistente e idempotencia](./ORQUESTADOR_P0_ESTADO_2026-10-27.md) (el código y los registros están en Biblioteca privada).
+
 > **Último cierre (21/10/2026):** [CIERRE Y CONTINUIDAD — REANUDAR 22/10](./CIERRE_Y_CONTINUIDAD_2026-10-21.md) · [Checkpoint para retomar](./CHECKPOINT_2026-10-21.json)
 
 **Fecha:** 21/10/2026 · **Repositorio:** `Intisamin/myfristproject` (público).
