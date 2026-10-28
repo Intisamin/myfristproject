@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Intisamin/myfristproject/blob/main/MARKO/publico/contracts/agent_envelope.schema.json",
+  "title": "MARKO sobre de transferencia pública",
+  "description": "Contrato orientativo de interoperabilidad; no reemplaza los contratos privados P0.2.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "content_id",
+    "agent",
+    "source_version",
+    "status",
+    "approved",
+    "payload"
+  ],
+  "properties": {
+    "content_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent": {
+      "type": "string",
+      "enum": [
+        "validadoncio",
+        "negocioncio",
+        "ideoncio",
+        "programoncio",
+        "libretoncio",
+        "recursoncio",
+        "produccioncio",
+        "editoncio",
+        "revisioncio",
+        "publiconcio",
+        "analiticoncio"
+      ]
+    },
+    "source_version": {
+      "type": "string"
+    },
+    "source_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SHA-256 de la entrada"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "READY",
+        "RUNNING",
+        "COMPLETED",
+        "NEEDS_REVIEW",
+        "BLOCKED",
+        "FAILED"
+      ]
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_agent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requires_human_authorization": {
+      "type": "boolean"
+    },
+    "provider_operation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

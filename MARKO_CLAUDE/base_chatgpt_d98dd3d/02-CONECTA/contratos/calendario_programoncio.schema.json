@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "project_id",
+    "calendar_id",
+    "period",
+    "bank_version",
+    "approval",
+    "items"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "calendar_id": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "bank_version": {
+      "type": "string"
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "DRAFT",
+            "IN_REVIEW",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "approved_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "schedule_item_id",
+          "idea_id",
+          "production_due_date",
+          "publication_target_date",
+          "status"
+        ],
+        "properties": {
+          "schedule_item_id": {
+            "type": "string"
+          },
+          "idea_id": {
+            "type": "string"
+          },
+          "production_due_date": {
+            "type": "string"
+          },
+          "publication_target_date": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PLANNED",
+              "READY_FOR_BRIEF",
+              "SCRIPTING",
+              "IN_PRODUCTION",
+              "PUBLISHED",
+              "CANCELLED"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
