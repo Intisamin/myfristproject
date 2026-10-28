@@ -25,7 +25,7 @@ Referencia de Iván, **no verificada**: un dentista paga hoy entre S/800 y S/100
 ## Hipótesis críticas
 | # | Hipótesis | Cómo se valida |
 |---|---|---|
-| H1 | El avatar se puede generar y orquestar desde Claude | Prueba técnica. Avance 27/10: existe HeyGen Remote MCP oficial y avatar alternativo en Magnific. Falta la prueba en vivo |
+| H1 | El avatar se puede generar y orquestar desde Claude | **SUPERADA 27/10 21:37** — video de prueba generado desde Claude con el avatar "Ivan 2" vía HeyGen Remote MCP (4.3 s, 9:16, 720p, ~58 s de render) |
 | H2 | Un ciclo de 12 Reels/mes cabe en Claude Pro | Medición en piloto |
 | H3 | Los dentistas pagan hoy ~S/800–1000/mes en marketing | Entrevistas |
 | H4 | Un dentista aceptaría abrir y conectar 4 cuentas, o pagaría porque se las configuren | Entrevistas y preventa |

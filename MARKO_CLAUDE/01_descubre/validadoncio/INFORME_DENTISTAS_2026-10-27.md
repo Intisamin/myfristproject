@@ -58,3 +58,9 @@ Se requiere que Iván confirme el nicho A y autorice la prueba H1 (consume créd
 
 ## 7. Aprobación (27/10/2026, 21:24)
 Iván confirma el nicho: **consultorios privados, empezando por los odontológicos en Lima, Perú, con expansión posterior a consultorios privados en general de habla hispana**. Autoriza la prueba del avatar "Iván 2" con unos pocos segundos de video.
+
+## 8. Resultado H1 · Avatar orquestable desde Claude: SUPERADA (27/10/2026, 21:37)
+- **Conector:** HeyGen Remote MCP, autorizado por Iván.
+- **Avatar:** grupo "Ivan 2", look de tipo `photo_avatar`, voz por defecto, motor Avatar IV por defecto.
+- **Salida:** MP4 de 4.26 s, 9:16, 720p. Render en unos 58 s. Guion: "Hola, soy Iván. Esta es una prueba de Marko desde Claude."
+- **Pendiente:** el entorno de trabajo de Claude no puede descargar el MP4, porque la red bloquea el dominio de archivos de HeyGen. Para el archivo maestro con hash habrá que usar otra vía (descarga por Iván, transferencia vía Drive o runner en Vercel). Costo en créditos no registrado.
