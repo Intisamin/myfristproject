@@ -3,7 +3,7 @@
 ## Situación
 ChatGPT y Claude **no se conectan entre sí directamente**. Se coordinan a través de dos espacios compartidos que ambos pueden leer:
 - **GitHub** `Intisamin/myfristproject`: ChatGPT en `MARKO/`, Claude en `MARKO_CLAUDE/`.
-- **Google Drive** `3 Negocios/MARKO`: ChatGPT en `Datos Privados`, Claude en `MARKO_CLAUDE`.
+- **Google Drive** `3 Negocios`: ChatGPT en `3 Negocios/MARKO`, Claude en `3 Negocios/MARKO_CLAUDE` (carpetas hermanas).
 
 ## Reglas
 1. Cada IA escribe solo en su carpeta. Ambas pueden leer la carpeta de la otra.

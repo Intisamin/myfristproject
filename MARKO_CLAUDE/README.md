@@ -8,7 +8,7 @@ Copia de trabajo independiente de MARKO para desarrollarlo con Claude (skills, p
 ## Regla principal
 - **Claude escribe solo dentro de `MARKO_CLAUDE/`.** Nunca modifica `MARKO/`.
 - ChatGPT trabaja en `MARKO/`. Si una mejora de una línea sirve a la otra, se copia de forma explícita y se registra en `00_gobierno/REGISTRO_INTERCAMBIO.md`.
-- Repositorio **público**: aquí solo va documentación y código sin datos privados. Lo privado vive en Google Drive → `3 Negocios / MARKO / MARKO_CLAUDE`.
+- Repositorio **público**: aquí solo va documentación y código sin datos privados. Lo privado vive en Google Drive → `3 Negocios / MARKO_CLAUDE` (carpeta hermana de `MARKO`).
 
 ## Estructura
 | Carpeta | Contenido |
