@@ -1,0 +1,15 @@
+const {test} = require('node:test');
+const assert = require('node:assert/strict');
+const {assess} = require('../lib/guards.cjs');
+const content = {content_id:'TIP-CD-20261022-IA-V2',finalVideoArchived:true,finalVideoSha256:'a'.repeat(64),approvals:{finalVideo:true,publish:true,spend:true,campaign:true},publications:[]};
+const live = {durableStoreConnected:true,writerEnabled:true,network:'instagram'};
+test('fails closed when state is offline',()=>assert.equal(assess('publish',content,live && {...live,durableStoreConnected:false}).reason,'NO_DURABLE_STORE'));
+test('blocks unapproved publication',()=>assert.equal(assess('publish',{...content,approvals:{finalVideo:false,publish:true}},live).reason,'PUBLISH_APPROVAL_REQUIRED'));
+test('blocks repeated publication',()=>assert.equal(assess('publish',{...content,publications:[{network:'instagram',status:'PUBLISHED'}]},live).reason,'DUPLICATE_PUBLICATION'));
+test('requires a real archived final',()=>assert.equal(assess('publish',{...content,finalVideoArchived:false},live).reason,'FINAL_NOT_ARCHIVED'));
+test('blocks paid generation without budget',()=>assert.equal(assess('paid_generate',content,live).reason,'SPEND_APPROVAL_REQUIRED'));
+test('blocks duplicate assets',()=>assert.equal(assess('paid_generate',{...content,assets:[{sha256:'xyz',status:'READY'}]},{...live,costCap:1,assetSha256:'xyz'}).reason,'ASSET_ALREADY_EXISTS'));
+test('blocks unauthorized campaigns',()=>assert.equal(assess('launch_meta_campaign',content,live).reason,'CAMPAIGN_APPROVAL_REQUIRED'));
+test('blocks all writes until enabled',()=>assert.equal(assess('publish',content,{...live,writerEnabled:false}).reason,'WRITE_DISABLED'));
+test('permits a fully authorized dry-run decision',()=>assert.equal(assess('publish',content,live).allowed,true));
+test('unknown actions fail closed',()=>assert.equal(assess('delete_all',content,live).reason,'UNKNOWN_ACTION'));
