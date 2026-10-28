@@ -1,0 +1,33 @@
+{
+  "project_id": "MARKO-PRODUCTO-DENT-001",
+  "version": "0.1.0-2026-10-27",
+  "business_stage": "nuevo",
+  "geography": "Perú (foco inicial Lima)",
+  "status": "APTO_CON_HIPOTESIS",
+  "hypothesis": "Un dentista con consultorio privado pagaría por tener su propia agencia de marketing IA (plugin Marko en su cuenta Claude, con sus créditos) si cuesta menos que una agencia tradicional y alguien se lo configura.",
+  "selected_niche": "Dentistas con consultorio privado en Lima",
+  "approval": {"confirmed": false, "confirmed_by": null, "date": null},
+  "evidence": [
+    {"claim": "Agencia en Lima: manejo de redes para dentistas desde US$800/mes; pauta desde US$390/mes; inversión mínima en anuncios US$300/mes", "kind": "observed", "source": "https://flamacreators.com/marketing-digital-dentistas-lima", "date": "2026-10-27", "strength": "media", "limitation": "Una sola agencia, precios desde"},
+    {"claim": "Dentistas pagan S/800-1000/mes en marketing", "kind": "user_reported", "source": "Iván, conversación", "date": "2026-10-27", "strength": "media", "limitation": "Sin fuente documental"},
+    {"claim": "Costo de herramientas del cliente ≈ US$65-90/mes", "kind": "observed", "source": "Páginas de precios de Claude, HeyGen, Magnific y Metricool", "date": "2026-10-27", "strength": "alta", "limitation": "Precios cambiantes, más impuestos"},
+    {"claim": "HeyGen Remote MCP oficial conectable desde Claude, todos los planes, usa créditos del plan", "kind": "observed", "source": "https://docs.heygen.com/docs/heygen-remote-mcp-server", "date": "2026-10-27", "strength": "alta", "limitation": "No probado en vivo"},
+    {"claim": "Magnific ofrece avatar desde imagen + audio (OmniHuman, Veed Fabric)", "kind": "observed", "source": "Catálogo de modelos de Magnific de la cuenta", "date": "2026-10-27", "strength": "alta", "limitation": "Calidad y costo no probados"},
+    {"claim": "Plugins distribuibles por marketplace privado", "kind": "observed", "source": "https://code.claude.com/docs/en/plugins/create-marketplace", "date": "2026-10-27", "strength": "alta", "limitation": "Documentado para Claude Code"},
+    {"claim": "La mayoría de dentistas no configurará 4 cuentas por su cuenta", "kind": "hypothesis", "source": null, "date": null, "strength": "baja", "limitation": "Requiere entrevistas"}
+  ],
+  "critical_unknowns": [
+    "Número de dentistas habilitados y consultorios privados activos en Lima",
+    "Gasto mensual real en marketing (mediana)",
+    "Disposición a pagar por configuración asistida",
+    "Generación de avatar orquestada desde Claude en vivo",
+    "Suficiencia de Claude Pro para 12 Reels/mes",
+    "Canal de cobro e instalación en el chat web"
+  ],
+  "next_tests": [
+    {"hypothesis": "H1 avatar orquestable", "experiment": "Conectar HeyGen Remote MCP y generar un video corto (con autorización de créditos)", "decision_rule": "Si falla: probar Magnific OmniHuman; si ambos fallan: NO_RECOMENDADO_AHORA"},
+    {"hypothesis": "H3 gasto actual", "experiment": "10 entrevistas sobre gasto del último mes", "decision_rule": "Mediana < S/400 debilita el argumento de ahorro"},
+    {"hypothesis": "H4 pago por configuración", "experiment": "Preventa del escalón 2 con adelanto reembolsable", "decision_rule": "≥3/10 adelantos: diseñar oferta definitiva; 0-1: revisar segmento u oferta"},
+    {"hypothesis": "H2 límites de Claude Pro", "experiment": "Piloto de 4 Reels en una cuenta Pro", "decision_rule": "Si hay bloqueo: recalcular con un plan superior"}
+  ]
+}
